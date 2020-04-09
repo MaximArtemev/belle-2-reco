@@ -1,7 +1,29 @@
 belle2-reco
 ==============================
 
-belle-2 reco + preprocessing
+
+# Enviroment
+
+Check that you have latest docker release
+
+### Setup
+Docker image from https://hub.docker.com/r/mrartemev/pytorch
+
+To get it run `docker pull mrartemev/pytorch`
+
+### Usage
+
+`docker run --rm -v `pwd`:/workspace --name <name> --gpus all -it -p <port>:8888 mrartemev/pytorch`
+
+# Data
+
+To use .root data you will need ROOT package installed. To install it in your docker container you can do:
+1. `docker exec -it mrartemev-belle bash`
+2. Make sure you have https://root.cern.ch/build-prerequisites#ubuntu
+3. Follow https://github.com/root-project/root installation guide
+4. source /home/user/build/bin/thisroot.sh ??? 
+5. `pip install cppyy`
+
 
 Project Organization
 ------------
@@ -32,24 +54,22 @@ Project Organization
     │                         generated with `pip freeze > requirements.txt`
     │
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
+    └── src                <- Source code for use in this project.
+        ├── __init__.py    <- Makes src a Python module
+        │
+        ├── data           <- Scripts to download or generate data
+        │   └── make_dataset.py
+        │
+        ├── features       <- Scripts to turn raw data into features for modeling
+        │   └── build_features.py
+        │
+        ├── models         <- Scripts to train models and then use trained models to make
+        │   │                 predictions
+        │   ├── predict_model.py
+        │   └── train_model.py
+        │
+        └── visualization  <- Scripts to create exploratory and results oriented visualizations
+            └── visualize.py
 
 
 --------
