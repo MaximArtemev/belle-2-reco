@@ -1,0 +1,6 @@
+[submodule "modules/mrartemev_ganlib"]
+	path = modules/mrartemev_ganlib
+	url = https://github.com/MaximArtemev/mrartemev_ganlib
+[submodule "modules/mrartemev_nflib"]
+	path = modules/mrartemev_nflib
+	url = https://github.com/MaximArtemev/mrartemev_nflib

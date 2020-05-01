@@ -17,12 +17,9 @@ To get it run `docker pull mrartemev/pytorch`
 
 # Data
 
-To use .root data you will need ROOT package installed. To install it in your docker container you can do:
-1. `docker exec -it mrartemev-belle bash`
-2. Make sure you have https://root.cern.ch/build-prerequisites#ubuntu
-3. Follow https://github.com/root-project/root installation guide
-4. source /home/user/build/bin/thisroot.sh ??? 
-5. `pip install cppyy`
+To use .root data you will need ROOT package installed.
+East way to get `raw` data is to run SWAN at lxplus
+
 
 
 Project Organization

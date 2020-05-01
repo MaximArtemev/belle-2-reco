@@ -1,3 +1,8 @@
 *.root
 *.pyc
 *ipynb_checkpoints
+*.state_dict
+*.pickle
+*.csv.gz
+*.png
+*.pdf
